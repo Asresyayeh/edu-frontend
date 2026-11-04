@@ -1,6 +1,5 @@
 import { Award, Users, Rocket, BarChart3, Trophy } from "lucide-react";
 
-// Add your banner image path here
 const BANNER_IMG = "";
 
 const perks = [
