@@ -3,8 +3,13 @@ import { GraduationCap, Search, Menu, X } from "lucide-react";
 
 const nav = ["Home", "Courses", "Pages", "Services", "Shop", "Contact"];
 
-function Navbar() {
+function Navbar({ onLoginClick }) {
   const [open, setOpen] = useState(false);
+
+  const handleLoginClick = () => {
+    setOpen(false);
+    onLoginClick();
+  };
 
   return (
     <header className="sticky top-0 z-30 bg-brand-800/95 backdrop-blur">
@@ -36,12 +41,13 @@ function Navbar() {
         {/* Desktop Actions */}
         <div className="hidden items-center gap-5 md:flex">
           <Search className="h-5 w-5 text-white/85" />
-          <a
-            href="#"
+
+          <button
+            onClick={handleLoginClick}
             className="inline-block rounded-md bg-gold px-5 py-2 text-sm font-semibold text-brand-900 transition hover:brightness-105"
           >
             Get Started
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -68,12 +74,12 @@ function Navbar() {
             </a>
           ))}
 
-          <a
-            href="#"
+          <button
+            onClick={handleLoginClick}
             className="inline-block rounded-md bg-gold px-6 py-2 text-sm font-semibold text-brand-900"
           >
             Get Started
-          </a>
+          </button>
         </div>
       )}
     </header>
