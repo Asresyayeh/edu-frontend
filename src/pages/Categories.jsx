@@ -26,7 +26,7 @@ const Title = ({ children, sub }) => (
 
 function Categories() {
   return (
-    <section className="bg-white py-14">
+    <section id="categories" className="bg-white py-14">
       <div className="mx-auto max-w-7xl px-5">
         <Title sub="Explore top categories and find the right course for you.">
           Popular Categories

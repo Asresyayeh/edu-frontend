@@ -45,7 +45,10 @@ export default function Service() {
   return (
     <main className="font-sans antialiased">
       {/* Header */}
-      <section className="relative overflow-hidden bg-brand-800 px-5 py-20 text-center text-white">
+      <section
+        id="services"
+        className="relative overflow-hidden bg-brand-800 px-5 py-20 text-center text-white"
+      >
         <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-brand-700/50 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
         <p className="relative text-sm font-semibold uppercase tracking-widest text-gold">

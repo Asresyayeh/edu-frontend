@@ -27,7 +27,10 @@ const HERO_IMAGES = [
 
 function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-brand-900 text-white">
+    <section
+      id="home"
+      className="relative min-h-screen overflow-hidden bg-brand-900 text-white"
+    >
       {/* Scrolling background images */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="hero-slider flex h-full w-max">

@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { GraduationCap, Search, Menu, X } from "lucide-react";
 
-const nav = ["Home", "Courses", "Pages", "Services", "Shop", "Contact"];
+const nav = [
+  { name: "Home", link: "#home" },
+  { name: "Courses", link: "#courses" },
+  { name: "Services", link: "#services" },
+  { name: "Categories", link: "#categories" },
+  { name: "Contact", link: "#contact" },
+];
 
 function Navbar({ onLoginClick }) {
   const [open, setOpen] = useState(false);
@@ -27,13 +33,13 @@ function Navbar({ onLoginClick }) {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 text-sm text-white/85 md:flex">
-          {nav.map((n, i) => (
+          {nav.map((item, i) => (
             <a
-              key={n}
-              href="#"
+              key={item.name}
+              href={item.link}
               className={`hover:text-gold ${i === 0 ? "text-gold" : ""}`}
             >
-              {n}
+              {item.name}
             </a>
           ))}
         </nav>
@@ -63,14 +69,14 @@ function Navbar({ onLoginClick }) {
       {/* Mobile Navigation */}
       {open && (
         <div className="space-y-3 border-t border-white/10 px-5 pb-5 pt-3 md:hidden">
-          {nav.map((n) => (
+          {nav.map((item) => (
             <a
-              key={n}
-              href="#"
+              key={item.name}
+              href={item.link}
               className="block text-white/90"
               onClick={() => setOpen(false)}
             >
-              {n}
+              {item.name}
             </a>
           ))}
 
