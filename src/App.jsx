@@ -86,7 +86,6 @@ function App() {
         }
       />
 
-      {/* Student Dashboard with Sidebar */}
       <Route path="/student" element={<StudentDashboardLayout />}>
         <Route path="dashboard" element={<StudentDashboard />} />
         <Route path="courses" element={<StudentCourses />} />
