@@ -61,7 +61,6 @@ function TutorSidebar({ isOpen, onClose }) {
           </button>
         </div>
 
-        {/* Navigation */}
         <div className="flex-1 overflow-y-auto px-4 py-6">
           <p className="mb-4 px-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
             Tutor Menu
