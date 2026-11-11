@@ -92,7 +92,6 @@ function TutorSidebar({ isOpen, onClose }) {
           </nav>
         </div>
 
-        {/* Logout */}
         <div className="border-t p-4">
           <button
             onClick={handleLogout}
