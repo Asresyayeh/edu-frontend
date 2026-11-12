@@ -39,8 +39,6 @@ function TutorDashboardLayout() {
             <span className="absolute right-2 top-2 h-2 w-2 rounded-full bg-red-500" />
           </button>
         </header>
-
-        {/* Page Content */}
         <main className="p-5 md:p-8">
           <Outlet />
         </main>
