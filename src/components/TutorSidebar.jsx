@@ -44,7 +44,6 @@ function TutorSidebar({ isOpen, onClose }) {
         border-r border-slate-200 bg-white transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
-        {/* Logo */}
         <div className="flex h-20 items-center justify-between border-b px-6">
           <div className="flex items-center gap-2">
             <div className="rounded-xl bg-blue-600 p-2 text-white">
