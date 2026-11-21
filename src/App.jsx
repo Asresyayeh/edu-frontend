@@ -41,6 +41,7 @@ import ParentSchedule from "./pages/parent/ParentSchedule";
 import ParentMessages from "./pages/parent/ParentMessages";
 import ParentPayments from "./pages/parent/ParentPayments";
 import ParentSettings from "./pages/parent/ParentSettings";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 
 function App() {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -115,6 +116,9 @@ function App() {
         <Route path="messages" element={<ParentMessages />} />
         <Route path="payments" element={<ParentPayments />} />
         <Route path="settings" element={<ParentSettings />} />
+      </Route>
+      <Route path="/admin" element={<ParentDashboardLayout />}>
+        <Route path="dashboard" element={<AdminDashboard />} />
       </Route>
     </Routes>
   );

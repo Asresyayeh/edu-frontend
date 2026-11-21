@@ -1,5 +1,4 @@
-import { Laptop, Star } from "lucide-react";
-
+import { Star } from "lucide-react";
 const courses = [
   {
     title: "Complete Web Development Bootcamp",
@@ -7,7 +6,8 @@ const courses = [
     reviews: 981,
     price: 69,
     old: 99,
-    tone: "from-sky-600 to-slate-800",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "UI/UX Design Masterclass",
@@ -15,7 +15,8 @@ const courses = [
     reviews: 672,
     price: 59,
     old: 89,
-    tone: "from-amber-600 to-stone-800",
+    image:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Digital Marketing Masterclass",
@@ -23,7 +24,8 @@ const courses = [
     reviews: 455,
     price: 49,
     old: 79,
-    tone: "from-emerald-600 to-teal-900",
+    image:
+      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Data Science with Python",
@@ -31,7 +33,8 @@ const courses = [
     reviews: 1204,
     price: 79,
     old: 119,
-    tone: "from-indigo-600 to-blue-950",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -56,10 +59,12 @@ function Courses() {
               key={c.title}
               className="overflow-hidden rounded-lg border border-slate-200 bg-white"
             >
-              <div
-                className={`grid h-36 place-items-center bg-gradient-to-br ${c.tone}`}
-              >
-                <Laptop className="h-9 w-9 text-white/70" />
+              <div className="h-44 overflow-hidden">
+                <img
+                  src={c.image}
+                  alt={c.title}
+                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                />
               </div>
 
               <div className="p-4">
