@@ -19,6 +19,16 @@ import StudentDashboardLayout from "./components/StudentDashboardLayout";
 import TutorDashboardLayout from "./components/TutorDashboardLayout";
 import TutorDashboard from "./pages/tutor/TutorDashboard";
 
+import AdminLayout from "./components/AdminLayout";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import UsersPage from "./pages/admin/Users";
+import CoursesPage from "./pages/admin/Courses";
+import CategoriesPage from "./pages/admin/Categories";
+import EnrollmentsPage from "./pages/admin/Enrollments";
+import PaymentsPage from "./pages/admin/Payments";
+import MessagesPage from "./pages/admin/Messages";
+import ReportsPage from "./pages/admin/Reports";
+
 import ParentDashboard from "./pages/parent/ParentDashboard";
 import ParentDashboardLayout from "./components/ParentDashboardLayout";
 import StudentCourses from "./pages/student/StudentCources";
@@ -41,7 +51,6 @@ import ParentSchedule from "./pages/parent/ParentSchedule";
 import ParentMessages from "./pages/parent/ParentMessages";
 import ParentPayments from "./pages/parent/ParentPayments";
 import ParentSettings from "./pages/parent/ParentSettings";
-import AdminDashboard from "./pages/admin/AdminDashboard";
 
 function App() {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -117,8 +126,15 @@ function App() {
         <Route path="payments" element={<ParentPayments />} />
         <Route path="settings" element={<ParentSettings />} />
       </Route>
-      <Route path="/admin" element={<ParentDashboardLayout />}>
+      <Route path="/admin" element={<AdminLayout />}>
         <Route path="dashboard" element={<AdminDashboard />} />
+        <Route path="users" element={<UsersPage />} />
+        <Route path="courses" element={<CoursesPage />} />
+        <Route path="categories" element={<CategoriesPage />} />
+        <Route path="enrollments" element={<EnrollmentsPage />} />
+        <Route path="payments" element={<PaymentsPage />} />
+        <Route path="messages" element={<MessagesPage />} />
+        <Route path="reports" element={<ReportsPage />} />
       </Route>
     </Routes>
   );

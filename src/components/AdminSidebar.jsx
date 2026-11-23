@@ -17,58 +17,21 @@ import {
 } from "lucide-react";
 
 const menuItems = [
-  {
-    name: "Dashboard",
-    path: "/admin/dashboard",
-    icon: LayoutDashboard,
-  },
-  {
-    name: "User Management",
-    path: "/admin/users",
-    icon: Users,
-  },
-  {
-    name: "Course Management",
-    path: "/admin/courses",
-    icon: BookOpen,
-  },
-  {
-    name: "Categories",
-    path: "/admin/categories",
-    icon: Layers,
-  },
-  {
-    name: "Enrollments",
-    path: "/admin/enrollments",
-    icon: ClipboardList,
-  },
-  {
-    name: "Payments",
-    path: "/admin/payments",
-    icon: CreditCard,
-  },
-  {
-    name: "Messages",
-    path: "/admin/messages",
-    icon: MessageSquare,
-  },
-  {
-    name: "Reports & Analytics",
-    path: "/admin/reports",
-    icon: BarChart3,
-  },
-  {
-    name: "Settings",
-    path: "/admin/settings",
-    icon: Settings,
-  },
+  { name: "Dashboard", path: "/admin/dashboard", icon: LayoutDashboard },
+  { name: "User Management", path: "/admin/users", icon: Users },
+  { name: "Course Management", path: "/admin/courses", icon: BookOpen },
+  { name: "Categories", path: "/admin/categories", icon: Layers },
+  { name: "Enrollments", path: "/admin/enrollments", icon: ClipboardList },
+  { name: "Payments", path: "/admin/payments", icon: CreditCard },
+  { name: "Messages", path: "/admin/messages", icon: MessageSquare },
+  { name: "Reports & Analytics", path: "/admin/reports", icon: BarChart3 },
+  { name: "Settings", path: "/admin/settings", icon: Settings },
 ];
 
 function AdminSidebar({ isOpen, onClose }) {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("educonnect_user");
-
     window.location.href = "/";
   };
 
@@ -76,18 +39,15 @@ function AdminSidebar({ isOpen, onClose }) {
     <>
       {/* Background Overlay */}
       {isOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/50 lg:hidden"
-          onClick={onClose}
-        />
+        <div className="fixed inset-0 z-40 bg-black/50" onClick={onClose} />
       )}
 
       {/* Sidebar */}
       <aside
         className={`fixed left-0 top-0 z-50 flex h-screen w-64 flex-col
-        border-r border-slate-200 bg-white transition-transform duration-300
-        ${isOpen ? "translate-x-0" : "-translate-x-full"}
-        lg:translate-x-0`}
+        border-r border-slate-200 bg-white shadow-xl
+        transition-transform duration-300 ease-in-out
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         {/* Logo */}
         <div className="flex h-20 items-center justify-between border-b px-6">
@@ -103,7 +63,7 @@ function AdminSidebar({ isOpen, onClose }) {
 
           <button
             onClick={onClose}
-            className="lg:hidden"
+            className="rounded-lg p-1 text-slate-500 hover:bg-slate-100"
             aria-label="Close sidebar"
           >
             <X size={22} />
@@ -121,7 +81,6 @@ function AdminSidebar({ isOpen, onClose }) {
               <p className="text-sm font-semibold text-slate-800">
                 Administrator
               </p>
-
               <p className="text-xs text-slate-500">System Admin</p>
             </div>
           </div>
